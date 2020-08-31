@@ -1,0 +1,29 @@
+<h1>Listing items</h1>
+
+<table>
+  <tr>
+    <th>Tipo</th>
+    <th>Price</th>
+    <th>Color</th>
+    <th>Client</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @items.each do |item| %>
+  <tr>
+    <td><%= item.tipo %></td>
+    <td><%= item.price %></td>
+    <td><%= item.color %></td>
+    <td><%= item.order_id %></td>
+    <td><%= link_to 'Show', [item.order, item] %></td>
+    <td><%= link_to 'Edit', edit_order_item_path(item.order, item) %></td>
+    <td><%= link_to 'Destroy', [item.order, item], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Item', new_order_item_path(params[:order_id]) %>

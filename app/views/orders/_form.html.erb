@@ -1,0 +1,16 @@
+
+<%= simple_form_for(@order) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.label :status %>
+    <%= f.select :status, Order::STATUS_OPT  %>
+
+    <%= f.association :client %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
