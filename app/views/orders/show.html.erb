@@ -7,13 +7,16 @@
 
 <p>
   <strong>Client:</strong>
-  <%= @order.client_id %>
+  <%= @order.client.name %>
 </p>
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
 <hr>
-
+<h1> New Items </h1>
+<%#= link_to 'Add item', new_order_item_path(@item.order) %>
+<%= render 'items/form' %>
+<hr>
 <% @order.items.each do |item| %>
   <tr>
     <p><b>Tipo:</b>
@@ -26,7 +29,7 @@
       <%= item.color %>
     </p>
     <p><b>Ordem:</b>
-      <%= item.order %>
+      <%= item.order.client_id %>
     </p>
     <td><%= link_to 'Show', [item.order, item] %></td>
     <td><%= link_to 'Destroy', [item.order, item], method: :delete, data: { confirm: 'Are you sure?' } %></td>

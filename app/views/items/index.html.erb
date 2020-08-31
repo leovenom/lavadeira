@@ -14,9 +14,9 @@
 <% @items.each do |item| %>
   <tr>
     <td><%= item.tipo %></td>
-    <td><%= item.price %></td>
+    <td>R$ <%= item.price %></td>
     <td><%= item.color %></td>
-    <td><%= item.order_id %></td>
+    <td><%= item.order.client.name %></td>
     <td><%= link_to 'Show', [item.order, item] %></td>
     <td><%= link_to 'Edit', edit_order_item_path(item.order, item) %></td>
     <td><%= link_to 'Destroy', [item.order, item], method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -27,3 +27,4 @@
 <br />
 
 <%= link_to 'New Item', new_order_item_path(params[:order_id]) %>
+<%= link_to 'Back', orders_path %>
