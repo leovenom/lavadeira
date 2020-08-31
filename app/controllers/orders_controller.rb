@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
   # GET /orders/1.json
   def show
     @item = @order.items.build
+    @items = @order.items.all
   end
 
   # GET /orders/new
@@ -28,7 +29,7 @@ class OrdersController < ApplicationController
     @order = Order.new(order_params)
 
     respond_to do |format|
-      if @order.save
+      if @order.save!
         format.html { redirect_to @order, notice: 'Order was successfully created.' }
         format.json { render :show, status: :created, location: @order }
       else

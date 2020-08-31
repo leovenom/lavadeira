@@ -24,7 +24,7 @@ class ItemsController < ApplicationController
   def create
     @item = @order.items.build(item_params)
 
-    if @item.save
+    if @item.save!
       redirect_to([@item.order, @item], notice: 'Item was successfully created.')
     else
       render action: 'new'
