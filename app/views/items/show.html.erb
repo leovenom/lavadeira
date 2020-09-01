@@ -17,8 +17,13 @@
 
 <p>
   <b>Order:</b>
-  <%= @item.order.client_id %>
+  <%= @item.order_id %>
 </p>
+<p>
+  <b>Item:</b>
+  <%= @item.id %>
+</p>
+
 
 <%= button_to "ENTREGA", root_path, :method => "get" %>
 

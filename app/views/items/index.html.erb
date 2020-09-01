@@ -6,8 +6,8 @@
     <th>Price</th>
     <th>Color</th>
     <th>Client</th>
-    <th></th>
-    <th></th>
+    <th>Order</th>
+    <th>item</th>
     <th></th>
   </tr>
 
@@ -17,6 +17,8 @@
     <td>R$ <%= item.price %></td>
     <td><%= item.color %></td>
     <td><%= item.order.client.name %></td>
+    <td><%= item.order_id %></td>
+    <td><%= item.id %></td>
     <td><%= link_to 'Show', [item.order, item] %></td>
     <td><%= link_to 'Edit', edit_order_item_path(item.order, item) %></td>
     <td><%= link_to 'Destroy', [item.order, item], method: :delete, data: { confirm: 'Are you sure?' } %></td>
