@@ -6,12 +6,12 @@
 </p>
 
 <p>
-  <strong>Client:</strong>
+  <strong>Cliente:</strong>
   <%= @order.client.name %>
 </p>
 
-<%= link_to 'Edit', edit_order_path(@order) %> |
-<%= link_to 'Back', orders_path %>
+<%= link_to 'Editar', edit_order_path(@order) %> |
+<%= link_to 'Voltar', orders_path %>
 <hr>
 <h1> New Items </h1>
 <%#= link_to 'Add item', new_order_item_path(@item.order) %>
@@ -19,5 +19,5 @@
 <hr>
 
 <h1>
-  <%= link_to "My items", order_items_path(@item.order) %>
+  <%= link_to "Meus items", order_items_path(@item.order) %>
 </h1>
