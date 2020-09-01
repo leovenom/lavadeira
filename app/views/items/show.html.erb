@@ -1,32 +1,37 @@
+ <div class="header">
+  <h1>Item</h1>
+ </div>
 
+<div class="content-item"> 
+  <p>
+    <b>Tipo:</b>
+    <%= @item.tipo %>
+  </p>
 
-<p>
-  <b>Tipo:</b>
-  <%= @item.tipo %>
-</p>
+  <p>
+    <b>Preço:</b>
+    <%= @item.price %>
+  </p>
 
-<p>
-  <b>Preço:</b>
-  <%= @item.price %>
-</p>
+  <p>
+    <b>Cor:</b>
+    <%= @item.color %>
+  </p>
 
-<p>
-  <b>Cor:</b>
-  <%= @item.color %>
-</p>
+  <p>
+    <b>Pedido:</b>
+    <%= @item.order_id %>
+  </p>
+  <p>
+    <b>Item:</b>
+    <%= @item.id %>
+  </p>
+</div>
 
-<p>
-  <b>Pedido:</b>
-  <%= @item.order_id %>
-</p>
-<p>
-  <b>Item:</b>
-  <%= @item.id %>
-</p>
+<%= button_to "ENTREGA", root_path, :method => "get", class:"button" %>
+<br>
+<hr>
 
-
-<%= button_to "ENTREGA", root_path, :method => "get" %>
-
-
-<%#= link_to 'Edit', edit_order_item_path(@item.order, @item) %> |
-<%= link_to 'Voltar', order_items_path(@item.order) %>
+<div class="footer"> 
+  <%= link_to 'Voltar', order_items_path(@item.order) %>
+</div>

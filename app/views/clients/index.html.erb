@@ -1,34 +1,35 @@
-<p id="notice"><%= notice %></p>
+  <div class="header">
+    <h1>Clients | 
+    <%= link_to " Novo pedido", new_order_path %>  |
+    <%= link_to " Meus pedidos",  orders_path %> 
+    </h1>
+  </div>
 
-<h1>Clients | 
-<%= link_to " Novo pedido", new_order_path %>  |
-<%= link_to " Meus pedidos",  orders_path %> 
-</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Telefone</th>
-      <th>Endereço</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @clients.each do |client| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= client.name %></td>
-        <td><%= client.phone_number %></td>
-        <td><%= client.address %></td>
-        <td><%= link_to 'Mostrar', client %></td>
-        <td><%= link_to 'Editar', edit_client_path(client) %></td>
-        <td><%= link_to 'Deletar', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @clients.each do |client| %>
+        <tr>
+          <td><%= client.name %></td>
+          <td><%= client.phone_number %></td>
+          <td><%= client.address %></td>
+          <td><%= link_to 'Mostrar', client %></td>
+          <td><%= link_to 'Editar', edit_client_path(client) %></td>
+          <td><%= link_to 'Deletar', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'Novo Cliente', new_client_path %>
+  <br>
+  <h1 class="footer">
+    <%= link_to 'Novo Cliente', new_client_path %>
+  <h1>

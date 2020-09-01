@@ -1,20 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="header">
+  <h1>Meu endereço |
+  <%= link_to 'Editar', edit_client_path(@client) %>
+  </h1>
+</div>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @client.name %>
-</p>
+<div class="content">
+  <p>
+    <strong>Nome:</strong>
+    <%= @client.name %>
+  </p>
 
-<p>
-  <strong>Telefone:</strong>
-  <%= @client.phone_number %>
-</p>
+  <p>
+    <strong>Telefone:</strong>
+    <%= @client.phone_number %>
+  </p>
 
-<p>
-  <strong>Endereço:</strong>
-  <%= @client.address %>
-</p>
-<%= link_to 'Pedido', orders_path %> |
-<br />
-<%= link_to 'Editar', edit_client_path(@client) %> |
-<%= link_to 'Voltar', clients_path %>
+  <p>
+    <strong>Endereço:</strong>
+    <%= @client.address %>
+  </p>
+</div>
+
+<h1 class="footer">
+  <%= link_to 'Voltar', clients_path %>
+<h1>

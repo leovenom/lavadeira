@@ -1,6 +1,11 @@
-<h1>Editar Pedido</h1>
+<div class="header">
+  <h1>Editar Pedido | <%= link_to 'Mostrar', @order %> </h1>
+</div>
 
-<%= render 'form', order: @order %>
+<div class="form">
+  <%= render 'form', order: @order %>
+</div>
 
-<%= link_to 'Mostrar', @order %> |
-<%= link_to 'Voltar', orders_path %>
+<h1 class="footer">
+  <%= link_to 'Voltar', orders_path %>
+</h1>
