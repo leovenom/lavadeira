@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  has_many :items
+  has_many :items, dependent: :destroy
   belongs_to :client
 
   validates :status, inclusion: { in: [ 'pending', 'delivered' ] }
