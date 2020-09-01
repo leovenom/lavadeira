@@ -21,9 +21,9 @@
         <td><%= client.name %></td>
         <td><%= client.phone_number %></td>
         <td><%= client.address %></td>
-        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Mostrar', client %></td>
         <td><%= link_to 'Editar', edit_client_path(client) %></td>
-        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Deletar', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

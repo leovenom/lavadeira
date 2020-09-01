@@ -19,9 +19,9 @@
     <td><%= item.order.client.name %></td>
     <td><%= item.order_id %></td>
     <td><%= item.id %></td>
-    <td><%= link_to 'Show', [item.order, item] %></td>
-    <td><%= link_to 'Edit', edit_order_item_path(item.order, item) %></td>
-    <td><%= link_to 'Destroy', [item.order, item], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Mostrar', [item.order, item] %></td>
+    <td><%= link_to 'Editar', edit_order_item_path(item.order, item) %></td>
+    <td><%= link_to 'Deletar', [item.order, item], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
