@@ -13,3 +13,77 @@
  *= require_tree .
  *= require_self
  */
+
+ .header {
+  justify-content: center;
+  display: flex;
+  padding: 20px;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.footer a{
+  text-decoration: none;
+  justify-content: center;
+  display: flex;
+  font-size: 1.4rem;
+}
+
+form {
+  padding-left: 39.5rem;
+}
+
+form.button_to {
+  padding-left: 42rem;
+}
+
+.content {
+  padding-left: 38rem;
+}
+.content-item {
+  padding-left: 42rem;
+}
+
+label {
+  margin-right: 1rem;
+}
+
+input {
+  align-items: flex-end;
+  display: flex;
+  margin-bottom: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+
+.form-actions {
+  margin-top: 5px;
+}
+
+table {
+  padding-left: 25rem;
+}
+table.list {
+  padding-left: 10rem;
+  text-align: center;
+}
+
+
+th {
+  padding: 15px 55px;
+}
+td {
+  padding: 10px;
+}
+
+select {
+  margin-bottom: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.middle-link {
+  justify-content: center;
+  display: flex;
+}

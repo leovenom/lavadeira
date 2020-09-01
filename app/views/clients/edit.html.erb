@@ -1,6 +1,11 @@
-<h1>Editar Cliente</h1>
+<div class="header">
+  <h1>Editar Cliente  | <%= link_to 'Mostrar', @client %> </h1>
+</div>
 
-<%= render 'form', client: @client %>
+<div class="form">
+  <%= render 'form', client: @client %>
+</div>
 
-<%= link_to 'Show', @client %> |
-<%= link_to 'Voltar', clients_path %>
+<h1 class="footer">
+  <%= link_to 'Voltar', clients_path %>
+<h1>

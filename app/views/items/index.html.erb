@@ -1,6 +1,8 @@
-<h1>Lista de itens</h1>
-
-<table>
+<div class="header">
+  <h1>Lista de itens | <%= link_to 'Novo Item', new_order_item_path(params[:order_id]) %>
+</h1>
+</div>
+<table class="list">
   <tr>
     <th>Tipo</th>
     <th>Preçp</th>
@@ -28,6 +30,6 @@
 
 <br />
 
-<%= link_to 'Novo Item', new_order_item_path(params[:order_id]) %>
-<%= link_to 'Voltar', orders_path %>
-
+<h1 class="footer">
+  <%= link_to 'Voltar', orders_path %>
+</h1>

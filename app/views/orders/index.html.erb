@@ -1,6 +1,6 @@
-
-<h1>Pedidos
-</h1>
+<div class="header">
+  <h1>Pedidos | <%= link_to 'Novo pedido', new_order_path %></h1>
+</div>
 
 <table>
   <thead>
@@ -26,5 +26,6 @@
 
 <br>
 
-<%= link_to 'Novo pedido', new_order_path %>
-<%= link_to 'Voltar', clients_path %>
+<h1 class="footer">
+  <%= link_to 'Voltar', clients_path %>
+<h1>

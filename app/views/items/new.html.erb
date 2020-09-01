@@ -1,5 +1,11 @@
-<h1>Novo item</h1>
+<div class="header">
+  <h1>Novo item</h1>
+</div>
 
-<%= render 'form' %>
+<div class="form">
+  <%= render 'form' %>
+</div>
 
-<%= link_to 'Voltar', order_items_path(@item.order) %>
+<h1 class="footer">
+  <%= link_to 'Voltar', order_items_path(@item.order) %>
+</h1>

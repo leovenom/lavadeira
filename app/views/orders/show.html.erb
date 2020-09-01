@@ -1,23 +1,37 @@
+<div class="header">
+  <h1>Meu Pedido</h1>
+</div>
 
+<div class="content">
+  <p>
+    <strong>Status:</strong>
+    <%= @order.status %>
+  </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @order.status %>
-</p>
+  <p>
+    <strong>Cliente:</strong>
+    <%= @order.client.name %>
+  </p>
+</div>
 
-<p>
-  <strong>Cliente:</strong>
-  <%= @order.client.name %>
-</p>
+<div class="middle-link">
+  <h3>
+    <%= link_to 'Voltar', orders_path %> | <%= link_to 'Editar', edit_order_path(@order) %>
+  </h3>
+</div>
 
-<%= link_to 'Editar', edit_order_path(@order) %> |
-<%= link_to 'Voltar', orders_path %>
 <hr>
-<h1> New Items </h1>
+<div class="header">
+  <h1> Adicionar item ao pedido</h1>
+</div>
 <%#= link_to 'Add item', new_order_item_path(@item.order) %>
-<%= render 'items/form' %>
+<div class="form">
+  <%= render 'items/form' %>
+</div>
+<br>
+
 <hr>
 
-<h1>
-  <%= link_to "Meus items", order_items_path(@item.order) %>
-</h1>
+<div class="footer">
+  <h1><%= link_to "Meus items", order_items_path(@item.order) %></h1>
+</div>
