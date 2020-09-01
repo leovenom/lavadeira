@@ -1,5 +1,5 @@
 <div class="header">
-  <h1>Pedidos | <%= link_to 'Novo pedido', new_order_path %></h1>
+  <h1>Todos os Pedidos | <%= link_to 'Novo pedido', new_order_path %></h1>
 </div>
 
 <table>
@@ -16,8 +16,8 @@
       <tr>
         <td><%= order.status %></td>
         <td><%= order.client.name  %></td>
-        <td><%= link_to 'Mostrar', order %></td>
-        <td><%= link_to 'Edita', edit_order_path(order) %></td>
+        <td><%= link_to 'Adicionar item', order %></td>
+        <td><%= link_to 'Editar', edit_order_path(order) %></td>
         <td><%= link_to 'Deletar', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

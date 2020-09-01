@@ -1,11 +1,9 @@
   <div class="header">
-    <h1>Clients | 
-    <%= link_to " Novo pedido", new_order_path %>  |
-    <%= link_to " Meus pedidos",  orders_path %> 
+    <h1>Lista de Clientes
     </h1>
   </div>
 
-  <table>
+  <table class="client">
     <thead>
       <tr>
         <th>Nome</th>
@@ -21,7 +19,7 @@
           <td><%= client.name %></td>
           <td><%= client.phone_number %></td>
           <td><%= client.address %></td>
-          <td><%= link_to 'Mostrar', client %></td>
+          <%# <td><%= link_to 'Mostrar', client %><%#</td> %>
           <td><%= link_to 'Editar', edit_client_path(client) %></td>
           <td><%= link_to 'Deletar', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
@@ -32,4 +30,6 @@
   <br>
   <h1 class="footer">
     <%= link_to 'Novo Cliente', new_client_path %>
-  <h1>
+    <%= link_to " Novo pedido", new_order_path %>
+    <%= link_to " Ver todos os pedidos",  orders_path %> 
+  </h1>

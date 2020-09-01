@@ -1,5 +1,7 @@
  <div class="header">
-  <h1>Item</h1>
+  <h1>Item #
+  <%= @item.id %>
+  </h1>
  </div>
 
 <div class="content-item"> 
@@ -23,12 +25,10 @@
     <%= @item.order_id %>
   </p>
   <p>
-    <b>Item:</b>
-    <%= @item.id %>
+    <%#= @item.id %>
   </p>
 </div>
 
-<%= button_to "ENTREGA", root_path, :method => "get", class:"button" %>
 <br>
 <hr>
 

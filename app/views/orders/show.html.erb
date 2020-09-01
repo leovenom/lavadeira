@@ -1,5 +1,7 @@
 <div class="header">
-  <h1>Meu Pedido</h1>
+  <h1>Pedido #
+    <%= @item.order_id %>
+  </h1>
 </div>
 
 <div class="content">
@@ -16,7 +18,7 @@
 
 <div class="middle-link">
   <h3>
-    <%= link_to 'Voltar', orders_path %> | <%= link_to 'Editar', edit_order_path(@order) %>
+    <%= link_to 'Voltar', orders_path %>
   </h3>
 </div>
 
@@ -33,5 +35,5 @@
 <hr>
 
 <div class="footer">
-  <h1><%= link_to "Meus items", order_items_path(@item.order) %></h1>
+  <h1><%= link_to "Ver resumo do pedido", order_items_path(@item.order) %></h1>
 </div>

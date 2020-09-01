@@ -7,7 +7,7 @@
     <%= f.label :status %>
     <%= f.select :status, Order::STATUS_OPT  %>
 
-    <%= f.association :client %>
+    <%= f.association :client, label:"Cliente" %>
   </div>
 
   <div class="form-actions">

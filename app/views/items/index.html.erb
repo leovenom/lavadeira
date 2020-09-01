@@ -1,14 +1,22 @@
 <div class="header">
-  <h1>Lista de itens | <%= link_to 'Novo Item', new_order_item_path(params[:order_id]) %>
-</h1>
+  <h1>Resumo do pedido #<%= @order.id %>
+  </h1>
 </div>
-<table class="list">
+<div class="contact">
+  <h3>Cliente: <%= @order.client.name %>
+  </h3>
+  <h3>Telefone: <%= @order.client.phone_number %>
+  </h3>
+  <h3>Endereço: <%= @order.client.address %>
+  </h3>
+</div>
+
+<br>
+<table class="list-order">
   <tr>
     <th>Tipo</th>
-    <th>Preçp</th>
+    <th>Preço</th>
     <th>Cor</th>
-    <th>Cliente</th>
-    <th>Pedido</th>
     <th>Item</th>
     <th></th>
   </tr>
@@ -18,10 +26,8 @@
     <td><%= item.tipo %></td>
     <td>R$ <%= item.price %></td>
     <td><%= item.color %></td>
-    <td><%= item.order.client.name %></td>
-    <td><%= item.order_id %></td>
     <td><%= item.id %></td>
-    <td><%= link_to 'Mostrar', [item.order, item] %></td>
+    <%# <td><%= link_to 'Mostrar', [item.order, item] %><%#</td> %>
     <td><%= link_to 'Editar', edit_order_item_path(item.order, item) %></td>
     <td><%= link_to 'Deletar', [item.order, item], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
@@ -29,7 +35,11 @@
 </table>
 
 <br />
+<%= button_to "ENTREGAR", root_path, :method => "get", class:"button" %>
+
+
 
 <h1 class="footer">
-  <%= link_to 'Voltar', orders_path %>
+  <%= link_to 'Adicionar novo item a este pedido', new_order_item_path %>
+  <%= link_to 'Ver lista de pedidos', orders_path %>
 </h1>
